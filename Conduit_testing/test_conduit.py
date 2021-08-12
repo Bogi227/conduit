@@ -3,18 +3,18 @@ from selenium import webdriver
 # from selenium.webdriver.common.by import By
 # from selenium.webdriver.support.wait import WebDriverWait
 # from selenium.webdriver.support import expected_conditions as EC
-# from selenium.webdriver.chrome.options import Options
-# from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
 import time
 from conduit_methods import *
 
 
 class TestConduit(object):
     def setup(self):
-        # browser_options = Options()
-        # browser_options.headless = False
-        # self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=browser_options)
-        self.driver = webdriver.Chrome("G:\\Desktop\\chromedriver.exe")
+        browser_options = Options()
+        browser_options.headless = True
+        self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=browser_options)
+        # self.driver = webdriver.Chrome("G:\\Desktop\\chromedriver.exe")
         self.driver.get("http://localhost:1667/")
         time.sleep(3)
 
