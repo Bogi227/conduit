@@ -1,0 +1,13 @@
+Automata tesztesetek:
+
+1. Regisztráció
+2. Sütik elfogadása
+3. Bejelentkezés
+4. Listázás
+5. Kijelentkezés
+6. Lapozás
+7. Poszt létrehozása
+8. Poszt törlése
+9. Poszt módosítása
+10. Sorozatos adatbevitel
+11. Adat lementése
