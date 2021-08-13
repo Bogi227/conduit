@@ -135,12 +135,8 @@ class TestConduit(object):
         time.sleep(4)
         self.driver.find_element_by_xpath("//input[@placeholder='Enter tags']").send_keys("modify2")
         self.driver.find_element_by_xpath("//button[@type='submit']").click()
-        time.sleep(4)
-        tags = self.driver.find_elements_by_xpath("//a[@class='tag-pill tag-default'])")
-        for i in tags:
-            if i.text == "modify2":
-                success = True
-                assert success != False
+        time.sleep(6)
+        assert self.driver.find_element_by_xpath('//*[@id="app"]/div/div[2]/div[1]/div/div[2]/a[2]').text == "modify2"
 
 
     # def test_save_data(self):
