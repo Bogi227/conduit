@@ -1,8 +1,8 @@
 import csv
 from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+# from selenium.webdriver.common.by import By
+# from selenium.webdriver.support.wait import WebDriverWait
+# from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 import time
@@ -166,6 +166,13 @@ class TestConduit(object):
     def test_saving_data(self):
         conduit_login(self.driver)
         time.sleep(4)
+        self.driver.find_element_by_xpath("//li[4]//a[1]").click()
+        time.sleep(4)
+        profile_name = self.driver.find_element_by_xpath('//li[4]//a[1]').text
+        with open('profilename.txt', 'w') as file:
+            file.write(profile_name)
+        # with open('Conduit_testing/profilename.txt', 'r') as file:
+
 
 
 
