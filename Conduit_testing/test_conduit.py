@@ -131,7 +131,7 @@ class TestConduit(object):
         self.driver.find_element_by_xpath("//input[@placeholder='Enter tags']").send_keys("modify1")
         self.driver.find_element_by_xpath("//button[@type='submit']").click()
         time.sleep(4)
-        self.driver.find_element_by_xpath("//a[@href='#/editor/fg']//span").click()
+        self.driver.find_element_by_xpath("//a[@class='btn btn-sm btn-outline-secondary']").click()
         time.sleep(4)
         self.driver.find_element_by_xpath("//input[@placeholder='Enter tags']").send_keys("modify2")
         self.driver.find_element_by_xpath("//button[@type='submit']").click()
