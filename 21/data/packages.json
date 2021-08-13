@@ -1,0 +1,100 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "Conduit_testing.test_conduit",
+    "children" : [ {
+      "name" : "test_registration",
+      "uid" : "211ca956f9d26177",
+      "parentUid" : "7d4969ee9ccb99440ca1c7775cc2f993",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628869333852,
+        "stop" : 1628869340498,
+        "duration" : 6646
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_cookies",
+      "uid" : "1955f16158af5304",
+      "parentUid" : "7d4969ee9ccb99440ca1c7775cc2f993",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628869345132,
+        "stop" : 1628869348197,
+        "duration" : 3065
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_login",
+      "uid" : "a13d4b0d5471b477",
+      "parentUid" : "7d4969ee9ccb99440ca1c7775cc2f993",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628869352921,
+        "stop" : 1628869357241,
+        "duration" : 4320
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_listing",
+      "uid" : "1c3ed3310f617635",
+      "parentUid" : "7d4969ee9ccb99440ca1c7775cc2f993",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628869361855,
+        "stop" : 1628869367165,
+        "duration" : 5310
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_logout",
+      "uid" : "687e571e820b440f",
+      "parentUid" : "7d4969ee9ccb99440ca1c7775cc2f993",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628869371823,
+        "stop" : 1628869380196,
+        "duration" : 8373
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_pagination",
+      "uid" : "2d8411afc48d49b9",
+      "parentUid" : "7d4969ee9ccb99440ca1c7775cc2f993",
+      "status" : "passed",
+      "time" : {
+        "start" : 1628869384821,
+        "stop" : 1628869389234,
+        "duration" : 4413
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_new_post",
+      "uid" : "12161c148d2121ef",
+      "parentUid" : "7d4969ee9ccb99440ca1c7775cc2f993",
+      "status" : "broken",
+      "time" : {
+        "start" : 1628869392878,
+        "stop" : 1628869393211,
+        "duration" : 333
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "Conduit_testing.test_conduit"
+  } ],
+  "name" : "packages"
+}
