@@ -112,12 +112,9 @@ class TestConduit(object):
         time.sleep(3)
         self.driver.find_element_by_xpath("//button[@class='btn btn-outline-danger btn-sm']//span[1]").click()
         time.sleep(3)
-        delete_test = self.driver.find_elements_by_xpath('//h1').text
+        delete_test = self.driver.find_elements_by_xpath('//h1')
         for i in delete_test:
-            if i != "Test Title Del":
-                print("test passed")
-            else:
-                print("test failed")
+            assert i.text != "Test Title Del"
 
     # def test_save_data(self):
     #     conduit_registration(self.driver)
