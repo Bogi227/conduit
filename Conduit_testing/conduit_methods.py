@@ -6,4 +6,3 @@ def conduit_login(driver):
 
 def conduit_logout(driver):
     driver.find_element_by_xpath('//*[@id="app"]/nav/div/ul/li[5]/a').click()
-
