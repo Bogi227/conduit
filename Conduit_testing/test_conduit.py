@@ -166,12 +166,12 @@ class TestConduit(object):
         time.sleep(6)
         self.driver.find_element_by_xpath("//li[4]//a[1]").click()
         time.sleep(4)
-        profile_name = self.driver.find_element_by_xpath('//h4').text
-        with open('profilename.txt', 'w') as file:
-            file.write(profile_name)
-        with open('Conduit_testing/profilename.txt', 'r') as file_b:
+        data_name = self.driver.find_element_by_xpath('//h4').text
+        with open('savedata.txt', 'w') as file:
+            file.write(data_name)
+        with open('Conduit_testing/savedata.txt', 'r') as file_b:
             txt_content = file_b.read()
-            assert txt_content == profile_name
+            assert txt_content == data_name
 
 
 
