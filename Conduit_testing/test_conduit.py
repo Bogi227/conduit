@@ -43,18 +43,18 @@ class TestConduit(object):
         time.sleep(3)
         assert self.driver.find_elements_by_xpath('//button') == []
 
-    # # Bejelentkezés
-    # def test_login(self):
-    #     conduit_registration(self.driver)
-    #     conduit_logout(self.driver)
-    #     time.sleep(1)
-    #     self.driver.find_element_by_xpath('//a[@href="#/login"]').click()
-    #     self.driver.find_element_by_xpath('//input[@placeholder="Email"]').send_keys("testmail4@test.hu")
-    #     self.driver.find_element_by_xpath('//input[@placeholder="Password"]').send_keys("Testpass1")
-    #     self.driver.find_element_by_xpath('//*[@id="app"]//form/button').click()
-    #     time.sleep(3)
-    #     my_feed = self.driver.find_element_by_xpath('//a[@href="#/my-feed"]')
-    #     assert my_feed.text == "Your Feed"
+    # Bejelentkezés
+    def test_login(self):
+        conduit_registration(self.driver)
+        conduit_logout(self.driver)
+        time.sleep(1)
+        self.driver.find_element_by_xpath('//a[@href="#/login"]').click()
+        self.driver.find_element_by_xpath('//input[@placeholder="Email"]').send_keys("testmail25@test.hu")
+        self.driver.find_element_by_xpath('//input[@placeholder="Password"]').send_keys("Testpass1")
+        self.driver.find_element_by_xpath('//*[@id="app"]//form/button').click()
+        time.sleep(3)
+        my_feed = self.driver.find_element_by_xpath('//a[@href="#/my-feed"]')
+        assert my_feed.text == "Your Feed"
     #
     # # Listázás
     # def test_listing(self):
