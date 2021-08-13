@@ -45,8 +45,8 @@ class TestConduit(object):
 
     # Bejelentkezés
     def test_login(self):
-        conduit_login(self.driver)
-        conduit_logout(self.driver)
+        # conduit_login(self.driver)
+        # conduit_logout(self.driver)
         time.sleep(1)
         self.driver.find_element_by_xpath('//a[@href="#/login"]').click()
         self.driver.find_element_by_xpath('//input[@placeholder="Email"]').send_keys("testmail61@test.hu")
