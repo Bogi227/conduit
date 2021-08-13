@@ -1,0 +1,43 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "Conduit_testing",
+    "children" : [ {
+      "name" : "test_conduit",
+      "children" : [ {
+        "name" : "TestConduit",
+        "children" : [ {
+          "name" : "test_pagination",
+          "uid" : "39859d18a1e6d06",
+          "parentUid" : "2d7d853f0824e0ff7d5ad1b4e9c7d8c1",
+          "status" : "broken",
+          "time" : {
+            "start" : 1628888588790,
+            "stop" : 1628888591303,
+            "duration" : 2513
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "test_saving_data",
+          "uid" : "172f2b4b80e7bc49",
+          "parentUid" : "2d7d853f0824e0ff7d5ad1b4e9c7d8c1",
+          "status" : "broken",
+          "time" : {
+            "start" : 1628888595952,
+            "stop" : 1628888602247,
+            "duration" : 6295
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "2d7d853f0824e0ff7d5ad1b4e9c7d8c1"
+      } ],
+      "uid" : "ee27b5806fd167cc26c08b91d71e224b"
+    } ],
+    "uid" : "d8f70bb26a63c6545f00ccf88846c4ea"
+  } ],
+  "name" : "suites"
+}

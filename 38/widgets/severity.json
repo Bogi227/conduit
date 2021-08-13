@@ -1,0 +1,21 @@
+[ {
+  "uid" : "39859d18a1e6d06",
+  "name" : "test_pagination",
+  "time" : {
+    "start" : 1628888588790,
+    "stop" : 1628888591303,
+    "duration" : 2513
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "172f2b4b80e7bc49",
+  "name" : "test_saving_data",
+  "time" : {
+    "start" : 1628888595952,
+    "stop" : 1628888602247,
+    "duration" : 6295
+  },
+  "status" : "broken",
+  "severity" : "normal"
+} ]
