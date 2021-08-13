@@ -66,13 +66,14 @@ class TestConduit(object):
 #         time.sleep(5)
 #         assert self.driver.find_element_by_xpath('//a[@href="#/login"]').text == "Sign in"
 #
-#     # Lapozás
-#     def test_pagination(self):
-#         conduit_login(self.driver)
-#         time.sleep(2)
-#         self.driver.find_element_by_xpath("//a[@class='page-link'][contains(text(),'2')]").click()
-#         time.sleep(2)
-#         self.driver.find_element_by_xpath("//a[@class='page-link'][contains(text(),'1')]").click()
+    # Lapozás
+    def test_pagination(self):
+        conduit_login(self.driver)
+        time.sleep(2)
+        self.driver.find_element_by_xpath("//a[@class='page-link'][contains(text(),'2')]").click()
+        time.sleep(2)
+        self.driver.find_element_by_xpath("//a[@class='page-link'][contains(text(),'1')]").click()
+        assert self.driver.find_element_by_xpath("//li[@class='page-item active']").text == "1"
 #
 #     # Post létrehozása
 #     def test_new_post(self):
@@ -161,7 +162,7 @@ class TestConduit(object):
     # Adat lementése
     def test_saving_data(self):
         conduit_login(self.driver)
-        time.sleep(4)
+        time.sleep(6)
         self.driver.find_element_by_xpath("//li[4]//a[1]").click()
         time.sleep(4)
         profile_name = self.driver.find_element_by_xpath('//h4').text
