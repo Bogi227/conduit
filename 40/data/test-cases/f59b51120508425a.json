@@ -1,0 +1,86 @@
+{
+  "uid" : "f59b51120508425a",
+  "name" : "test_saving_data",
+  "fullName" : "Conduit_testing.test_conduit.TestConduit#test_saving_data",
+  "historyId" : "520837002430ef87670ad59df20c7810",
+  "time" : {
+    "start" : 1628889700675,
+    "stop" : 1628889711044,
+    "duration" : 10369
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert 'asdfgh' == 'testname1'\n  - testname1\n  + asdfgh",
+  "statusTrace" : "self = <test_conduit.TestConduit object at 0x7f7b99791550>\n\n    def test_saving_data(self):\n        conduit_login(self.driver)\n        time.sleep(6)\n        self.driver.find_element_by_xpath(\"//li[4]//a[1]\").click()\n        time.sleep(4)\n        profile_name = self.driver.find_element_by_xpath('//h4').text\n        with open('profilename.txt', 'w') as file:\n            file.write(profile_name)\n        with open('Conduit_testing/profilename.txt', 'r') as file_b:\n            txt_content = file_b.read()\n>           assert txt_content == profile_name\nE           AssertionError: assert 'asdfgh' == 'testname1'\nE             - testname1\nE             + asdfgh\n\nConduit_testing/test_conduit.py:174: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert 'asdfgh' == 'testname1'\n  - testname1\n  + asdfgh",
+    "statusTrace" : "self = <test_conduit.TestConduit object at 0x7f7b99791550>\n\n    def test_saving_data(self):\n        conduit_login(self.driver)\n        time.sleep(6)\n        self.driver.find_element_by_xpath(\"//li[4]//a[1]\").click()\n        time.sleep(4)\n        profile_name = self.driver.find_element_by_xpath('//h4').text\n        with open('profilename.txt', 'w') as file:\n            file.write(profile_name)\n        with open('Conduit_testing/profilename.txt', 'r') as file_b:\n            txt_content = file_b.read()\n>           assert txt_content == profile_name\nE           AssertionError: assert 'asdfgh' == 'testname1'\nE             - testname1\nE             + asdfgh\n\nConduit_testing/test_conduit.py:174: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "37b9fd94f1df1864",
+      "name" : "log",
+      "source" : "37b9fd94f1df1864.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "4f9cccbc9c612927",
+      "name" : "stderr",
+      "source" : "4f9cccbc9c612927.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "Conduit_testing"
+  }, {
+    "name" : "suite",
+    "value" : "test_conduit"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestConduit"
+  }, {
+    "name" : "host",
+    "value" : "fv-az77-600"
+  }, {
+    "name" : "thread",
+    "value" : "3718-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "Conduit_testing.test_conduit"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "f59b51120508425a.json",
+  "parameterValues" : [ ]
+}
