@@ -1,8 +1,8 @@
 import csv
 from selenium import webdriver
-# from selenium.webdriver.common.by import By
-# from selenium.webdriver.support.wait import WebDriverWait
-# from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 import time
@@ -78,7 +78,7 @@ class TestConduit(object):
         time.sleep(2)
         self.driver.find_element_by_xpath("//a[@class='page-link'][contains(text(),'1')]").click()
 
-    # Új post
+    # Post létrehozása
     def test_new_post(self):
         conduit_login(self.driver)
         time.sleep(3)
@@ -139,11 +139,29 @@ class TestConduit(object):
         assert self.driver.find_element_by_xpath('//*[@id="app"]/div/div[2]/div[1]/div/div[2]/a[2]').text == "modify2"
 
 
-    # def test_save_data(self):
-    #     conduit_registration(self.driver)
-    #     self.driver.find_element_by_xpath("//a[@class ='nav-link'][normalize-space()='asdasd']").click()
-    #     with open("profilename.txt", 'w+') as file:
-
+    # Sorozatos adatbevitel
+    def test_upload_data(self):
+        conduit_login(self.driver)
+        time.sleep(4)
+        self.driver.find_element_by_xpath("//a[@href='#/editor']").click()
+        time.sleep(3)
+        self.driver.find_element_by_xpath('//input[@placeholder="Article Title"]').send_keys(
+            "Test Data2")
+        self.driver.find_element_by_xpath('//input[@placeholder="What\'s this article about?"]').send_keys(
+            "test test data")
+        self.driver.find_element_by_xpath("//textarea[@placeholder='Write your article (in markdown)']").send_keys(
+            "test test test data")
+        self.driver.find_element_by_xpath("//input[@placeholder='Enter tags']").send_keys("data")
+        self.driver.find_element_by_xpath("//button[@type='submit']").click()
+        time.sleep(4)
+        comment_field = self.driver.find_element_by_xpath("//textarea[@class='form-control']")
+        post_comment_btn = self.driver.find_element_by_xpath("//button[text()='Post Comment']")
+        with open('data.txt', 'r', encoding='utf-8') as f:
+            comment = f.readlines()
+            for row in comment:
+                comment_field.send_keys(row)
+                time.sleep(3)
+                post_comment_btn.click()
 
 
 
