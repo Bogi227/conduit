@@ -1,0 +1,86 @@
+{
+  "uid" : "7729a0cfce2c376a",
+  "name" : "test_delete_post",
+  "fullName" : "Conduit_testing.test_conduit.TestConduit#test_delete_post",
+  "historyId" : "b2171a9f6a553f136d41cb66b3caf8e0",
+  "time" : {
+    "start" : 1628871377907,
+    "stop" : 1628871390666,
+    "duration" : 12759
+  },
+  "status" : "broken",
+  "statusMessage" : "AttributeError: 'list' object has no attribute 'text'",
+  "statusTrace" : "self = <test_conduit.TestConduit object at 0x7f2321342b50>\n\n    def test_delete_post(self):\n        conduit_login(self.driver)\n        time.sleep(3)\n        self.driver.find_element_by_xpath(\"//a[@href='#/editor']\").click()\n        time.sleep(3)\n        self.driver.find_element_by_xpath('//input[@placeholder=\"Article Title\"]').send_keys(\n            \"Test Title Del\")\n        self.driver.find_element_by_xpath('//input[@placeholder=\"What\\'s this article about?\"]').send_keys(\n            \"test delete\")\n        self.driver.find_element_by_xpath(\"//textarea[@placeholder='Write your article (in markdown)']\").send_keys(\n            \"test test delete\")\n        self.driver.find_element_by_xpath(\"//input[@placeholder='Enter tags']\").send_keys(\"TEST\")\n        self.driver.find_element_by_xpath(\"//button[contains(text(),'Publish Article')]\").click()\n        time.sleep(3)\n        self.driver.find_element_by_xpath(\"//button[@class='btn btn-outline-danger btn-sm']//span[1]\").click()\n        time.sleep(3)\n>       delete_test = self.driver.find_elements_by_xpath('//h1').text\nE       AttributeError: 'list' object has no attribute 'text'\n\nConduit_testing/test_conduit.py:114: AttributeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "AttributeError: 'list' object has no attribute 'text'",
+    "statusTrace" : "self = <test_conduit.TestConduit object at 0x7f2321342b50>\n\n    def test_delete_post(self):\n        conduit_login(self.driver)\n        time.sleep(3)\n        self.driver.find_element_by_xpath(\"//a[@href='#/editor']\").click()\n        time.sleep(3)\n        self.driver.find_element_by_xpath('//input[@placeholder=\"Article Title\"]').send_keys(\n            \"Test Title Del\")\n        self.driver.find_element_by_xpath('//input[@placeholder=\"What\\'s this article about?\"]').send_keys(\n            \"test delete\")\n        self.driver.find_element_by_xpath(\"//textarea[@placeholder='Write your article (in markdown)']\").send_keys(\n            \"test test delete\")\n        self.driver.find_element_by_xpath(\"//input[@placeholder='Enter tags']\").send_keys(\"TEST\")\n        self.driver.find_element_by_xpath(\"//button[contains(text(),'Publish Article')]\").click()\n        time.sleep(3)\n        self.driver.find_element_by_xpath(\"//button[@class='btn btn-outline-danger btn-sm']//span[1]\").click()\n        time.sleep(3)\n>       delete_test = self.driver.find_elements_by_xpath('//h1').text\nE       AttributeError: 'list' object has no attribute 'text'\n\nConduit_testing/test_conduit.py:114: AttributeError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "bba7ae0fc6e3a3a2",
+      "name" : "log",
+      "source" : "bba7ae0fc6e3a3a2.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "a42c6b91c9af7ec2",
+      "name" : "stderr",
+      "source" : "a42c6b91c9af7ec2.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "Conduit_testing"
+  }, {
+    "name" : "suite",
+    "value" : "test_conduit"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestConduit"
+  }, {
+    "name" : "host",
+    "value" : "fv-az77-600"
+  }, {
+    "name" : "thread",
+    "value" : "3682-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "Conduit_testing.test_conduit"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "7729a0cfce2c376a.json",
+  "parameterValues" : [ ]
+}
