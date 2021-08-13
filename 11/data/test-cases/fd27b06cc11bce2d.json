@@ -1,0 +1,86 @@
+{
+  "uid" : "fd27b06cc11bce2d",
+  "name" : "test_listing",
+  "fullName" : "Conduit_testing.test_conduit.TestConduit#test_listing",
+  "historyId" : "1f1239f38076b596cb8212a51e57ab10",
+  "time" : {
+    "start" : 1628856173046,
+    "stop" : 1628856180513,
+    "duration" : 7467
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert [] != []",
+  "statusTrace" : "self = <test_conduit.TestConduit object at 0x7f5f5cd15910>\n\n    def test_listing(self):\n        conduit_registration(self.driver)\n        time.sleep(3)\n        article_titles = self.driver.find_elements_by_xpath('//a[@class=\"preview-link\"]')\n>       assert article_titles != []\nE       assert [] != []\n\nConduit_testing/test_conduit.py:64: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert [] != []",
+    "statusTrace" : "self = <test_conduit.TestConduit object at 0x7f5f5cd15910>\n\n    def test_listing(self):\n        conduit_registration(self.driver)\n        time.sleep(3)\n        article_titles = self.driver.find_elements_by_xpath('//a[@class=\"preview-link\"]')\n>       assert article_titles != []\nE       assert [] != []\n\nConduit_testing/test_conduit.py:64: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "7b1d23a7d9ed3411",
+      "name" : "log",
+      "source" : "7b1d23a7d9ed3411.txt",
+      "type" : "text/plain",
+      "size" : 344
+    }, {
+      "uid" : "5dadc2202949c3aa",
+      "name" : "stderr",
+      "source" : "5dadc2202949c3aa.txt",
+      "type" : "text/plain",
+      "size" : 215
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "Conduit_testing"
+  }, {
+    "name" : "suite",
+    "value" : "test_conduit"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestConduit"
+  }, {
+    "name" : "host",
+    "value" : "fv-az77-600"
+  }, {
+    "name" : "thread",
+    "value" : "3743-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "Conduit_testing.test_conduit"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "fd27b06cc11bce2d.json",
+  "parameterValues" : [ ]
+}
