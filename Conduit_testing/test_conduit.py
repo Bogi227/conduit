@@ -26,7 +26,7 @@ class TestConduit(object):
         self.driver.find_element_by_xpath('//*[@id="app"]/nav/div/ul/li[3]/a').click()
         time.sleep(3)
         self.driver.find_element_by_xpath('//input[@placeholder="Username"]').send_keys("testname1")
-        self.driver.find_element_by_xpath('//input[@placeholder="Email"]').send_keys("testmail11@test.hu")
+        self.driver.find_element_by_xpath('//input[@placeholder="Email"]').send_keys("testmail60@test.hu")
         self.driver.find_element_by_xpath('//input[@placeholder="Password"]').send_keys("Testpass1")
         self.driver.find_element_by_xpath('//*[@id="app"]//form/button').click()
         time.sleep(3)
@@ -45,27 +45,28 @@ class TestConduit(object):
 
     # Bejelentkezés
     def test_login(self):
-        conduit_registration(self.driver)
+        conduit_login(self.driver)
         conduit_logout(self.driver)
         time.sleep(1)
         self.driver.find_element_by_xpath('//a[@href="#/login"]').click()
-        self.driver.find_element_by_xpath('//input[@placeholder="Email"]').send_keys("testmail30@test.hu")
+        self.driver.find_element_by_xpath('//input[@placeholder="Email"]').send_keys("testmail60@test.hu")
         self.driver.find_element_by_xpath('//input[@placeholder="Password"]').send_keys("Testpass1")
         self.driver.find_element_by_xpath('//*[@id="app"]//form/button').click()
         time.sleep(3)
         my_feed = self.driver.find_element_by_xpath('//a[@href="#/my-feed"]')
         assert my_feed.text == "Your Feed"
 
-    # # Listázás
-    # def test_listing(self):
-    #     conduit_registration(self.driver)
-    #     time.sleep(5)
-    #     article_titles = self.driver.find_elements_by_xpath('//a[@class="preview-link"]')
+    # Listázás
+    def test_listing(self):
+        conduit_login(self.driver)
+        time.sleep(5)
+        article_titles = self.driver.find_elements_by_xpath('//a[@class="preview-link"]')
+        assert article_titles != []
 
-    #
+
     # Kijelentkezés
     def test_logout(self):
-        conduit_registration(self.driver)
+        conduit_login(self.driver)
         time.sleep(3)
         conduit_logout(self.driver)
         time.sleep(5)
