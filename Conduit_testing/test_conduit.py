@@ -91,7 +91,7 @@ class TestConduit(object):
         self.driver.find_element_by_xpath("//textarea[@placeholder='Write your article (in markdown)']").send_keys(
             "test test test")
         self.driver.find_element_by_xpath("//input[@placeholder='Enter tags']").send_keys("TEST")
-        self.driver.find_element_by_xpath("//button[contains(text(),'Publish Article')]").click()
+        self.driver.find_element_by_xpath("//button[@type='submit']").click()
         time.sleep(3)
         assert self.driver.find_element_by_xpath("//h1").text == "Test Title"
 
@@ -108,13 +108,40 @@ class TestConduit(object):
         self.driver.find_element_by_xpath("//textarea[@placeholder='Write your article (in markdown)']").send_keys(
             "test test delete")
         self.driver.find_element_by_xpath("//input[@placeholder='Enter tags']").send_keys("TEST")
-        self.driver.find_element_by_xpath("//button[contains(text(),'Publish Article')]").click()
+        self.driver.find_element_by_xpath("//button[@type='submit']").click()
         time.sleep(3)
         self.driver.find_element_by_xpath("//button[@class='btn btn-outline-danger btn-sm']//span[1]").click()
         time.sleep(3)
         delete_test = self.driver.find_elements_by_xpath('//h1')
         for i in delete_test:
             assert i.text != "Test Title Del"
+
+    # Post módosítása
+    def test_modify_post(self):
+        conduit_login(self.driver)
+        time.sleep(4)
+        self.driver.find_element_by_xpath("//a[@href='#/editor']").click()
+        time.sleep(3)
+        self.driver.find_element_by_xpath('//input[@placeholder="Article Title"]').send_keys(
+            "Test Mod Title")
+        self.driver.find_element_by_xpath('//input[@placeholder="What\'s this article about?"]').send_keys(
+            "test modify")
+        self.driver.find_element_by_xpath("//textarea[@placeholder='Write your article (in markdown)']").send_keys(
+            "test test modify")
+        self.driver.find_element_by_xpath("//input[@placeholder='Enter tags']").send_keys("modify1")
+        self.driver.find_element_by_xpath("//button[@type='submit']").click()
+        time.sleep(3)
+        self.driver.find_element_by_xpath("//a[@href='#/editor/fg']//span").click()
+        time.sleep(3)
+        self.driver.find_element_by_xpath("//input[@placeholder='Enter tags']").send_keys("modify2")
+        self.driver.find_element_by_xpath("//button[@type='submit']").click()
+        time.sleep(3)
+        tags = self.driver.find_elements_by_xpath("//a[@class='tag-pill tag-default'])")
+        for i in tags:
+            if i.text == "modify2":
+                success = True
+                assert success != False
+
 
     # def test_save_data(self):
     #     conduit_registration(self.driver)
