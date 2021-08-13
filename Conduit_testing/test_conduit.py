@@ -49,7 +49,7 @@ class TestConduit(object):
         conduit_logout(self.driver)
         time.sleep(1)
         self.driver.find_element_by_xpath('//a[@href="#/login"]').click()
-        self.driver.find_element_by_xpath('//input[@placeholder="Email"]').send_keys("testmail29@test.hu")
+        self.driver.find_element_by_xpath('//input[@placeholder="Email"]').send_keys("testmail30@test.hu")
         self.driver.find_element_by_xpath('//input[@placeholder="Password"]').send_keys("Testpass1")
         self.driver.find_element_by_xpath('//*[@id="app"]//form/button').click()
         time.sleep(3)
@@ -67,7 +67,7 @@ class TestConduit(object):
     def test_logout(self):
         conduit_registration(self.driver)
         time.sleep(3)
-        self.driver.find_element_by_xpath("//a[@active-class='active']").click()
+        conduit_logout(self.driver)
         time.sleep(5)
         assert self.driver.find_element_by_xpath('//a[@href="#/login"]').text == "Sign in"
     #
