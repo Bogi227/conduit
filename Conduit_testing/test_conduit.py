@@ -42,7 +42,7 @@ class TestConduit(object):
             ('//button[@class="cookie__bar__buttons__button cookie__bar__buttons__button--accept"]').click()
         time.sleep(3)
         assert self.driver.find_elements_by_xpath('//button') == []
-    #
+
     # # Bejelentkezés
     # def test_login(self):
     #     conduit_registration(self.driver)
