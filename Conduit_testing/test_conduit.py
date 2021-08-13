@@ -156,12 +156,17 @@ class TestConduit(object):
         time.sleep(4)
         comment_field = self.driver.find_element_by_xpath("//textarea[@class='form-control']")
         post_comment_btn = self.driver.find_element_by_xpath("//button[text()='Post Comment']")
-        with open('data.txt', 'r', encoding='utf-8') as f:
+        with open('Conduit_testing/data.txt', 'r', encoding='utf-8') as f:
             comment = f.readlines()
             for row in comment:
                 comment_field.send_keys(row)
                 time.sleep(3)
                 post_comment_btn.click()
+    # Adat lementése
+    def test_saving_data(self):
+        conduit_login(self.driver)
+        time.sleep(4)
+
 
 
 
