@@ -49,7 +49,7 @@ class TestConduit(object):
         conduit_logout(self.driver)
         time.sleep(1)
         self.driver.find_element_by_xpath('//a[@href="#/login"]').click()
-        self.driver.find_element_by_xpath('//input[@placeholder="Email"]').send_keys("testmail27@test.hu")
+        self.driver.find_element_by_xpath('//input[@placeholder="Email"]').send_keys("testmail28@test.hu")
         self.driver.find_element_by_xpath('//input[@placeholder="Password"]').send_keys("Testpass1")
         self.driver.find_element_by_xpath('//*[@id="app"]//form/button').click()
         time.sleep(3)
@@ -68,7 +68,7 @@ class TestConduit(object):
         conduit_registration(self.driver)
         time.sleep(3)
         self.driver.find_element_by_xpath('//*[@id="app"]/nav/div/ul/li[5]/a').click()
-        time.sleep(3)
+        time.sleep(5)
         assert self.driver.find_element_by_xpath('//a[@href="#/login"]').text == "Sign in"
     #
     # # Lapozás
