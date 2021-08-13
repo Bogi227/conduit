@@ -1,0 +1,30 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "Conduit_testing",
+    "children" : [ {
+      "name" : "test_conduit",
+      "children" : [ {
+        "name" : "TestConduit",
+        "children" : [ {
+          "name" : "test_saving_data",
+          "uid" : "f9fd80fcaa601f60",
+          "parentUid" : "2d7d853f0824e0ff7d5ad1b4e9c7d8c1",
+          "status" : "broken",
+          "time" : {
+            "start" : 1628887658683,
+            "stop" : 1628887663114,
+            "duration" : 4431
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "2d7d853f0824e0ff7d5ad1b4e9c7d8c1"
+      } ],
+      "uid" : "ee27b5806fd167cc26c08b91d71e224b"
+    } ],
+    "uid" : "d8f70bb26a63c6545f00ccf88846c4ea"
+  } ],
+  "name" : "suites"
+}
