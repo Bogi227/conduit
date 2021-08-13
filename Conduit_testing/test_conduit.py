@@ -119,7 +119,7 @@ class TestConduit(object):
     # Post módosítása
     def test_modify_post(self):
         conduit_login(self.driver)
-        time.sleep(4)
+        time.sleep(5)
         self.driver.find_element_by_xpath("//a[@href='#/editor']").click()
         time.sleep(3)
         self.driver.find_element_by_xpath('//input[@placeholder="Article Title"]').send_keys(
