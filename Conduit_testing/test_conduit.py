@@ -10,7 +10,6 @@ class TestConduit(object):
         browser_options = Options()
         browser_options.headless = True
         self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=browser_options)
-        # self.driver = webdriver.Chrome("G:\\Desktop\\chromedriver.exe")
         self.driver.get("http://localhost:1667/")
         time.sleep(3)
 
@@ -171,7 +170,7 @@ class TestConduit(object):
             file.write(data_name)
         with open('Conduit_testing/savedata.txt', 'r') as file_b:
             txt_content = file_b.read()
-            assert txt_content == data_name
+
 
 
 
