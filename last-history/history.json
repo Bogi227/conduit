@@ -9,14 +9,14 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "f9fd80fcaa601f60",
-      "reportUrl" : "https://Bogi227.github.io/conduit/36//#testresult/f9fd80fcaa601f60",
+      "uid" : "53947fed5318de0b",
+      "reportUrl" : "https://Bogi227.github.io/conduit/37//#testresult/53947fed5318de0b",
       "status" : "broken",
       "statusDetails" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//li[4]//a[1]\"}\n  (Session info: headless chrome=92.0.4515.131)",
       "time" : {
-        "start" : 1628887658683,
-        "stop" : 1628887663114,
-        "duration" : 4431
+        "start" : 1628888189701,
+        "stop" : 1628888194119,
+        "duration" : 4418
       }
     } ]
   }
