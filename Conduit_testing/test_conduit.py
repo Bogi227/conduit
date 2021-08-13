@@ -78,21 +78,21 @@ class TestConduit(object):
         time.sleep(2)
         self.driver.find_element_by_xpath("//a[@class='page-link'][contains(text(),'1')]").click()
 
-    # def test_new_post(self):
-    #     conduit_registration(self.driver)
-    #     self.driver.find_element_by_xpath("//a[@href='#/editor']").click()
-    #     time.sleep(3)
-    #     self.driver.find_element_by_xpath('//input[@placeholder="Article Title"]').send_keys(
-    #         "Test Title")
-    #     self.driver.find_element_by_xpath('//input[@placeholder="What\'s this article about?"]').send_keys(
-    #         "test test")
-    #     self.driver.find_element_by_xpath("//textarea[@placeholder='Write your article (in markdown)']").send_keys(
-    #         "test test test")
-    #     self.driver.find_element_by_xpath("//input[@placeholder='Enter tags']").send_keys("TEST")
-    #     self.driver.find_element_by_xpath("//button[contains(text(),'Publish Article')]").click()
-    #     time.sleep(3)
-    #     assert self.driver.find_element_by_xpath("//h1").text == "Test Title"
-    #
+    def test_new_post(self):
+        conduit_login(self.driver)
+        self.driver.find_element_by_xpath("//a[@href='#/editor']").click()
+        time.sleep(3)
+        self.driver.find_element_by_xpath('//input[@placeholder="Article Title"]').send_keys(
+            "Test Title")
+        self.driver.find_element_by_xpath('//input[@placeholder="What\'s this article about?"]').send_keys(
+            "test test")
+        self.driver.find_element_by_xpath("//textarea[@placeholder='Write your article (in markdown)']").send_keys(
+            "test test test")
+        self.driver.find_element_by_xpath("//input[@placeholder='Enter tags']").send_keys("TEST")
+        self.driver.find_element_by_xpath("//button[contains(text(),'Publish Article')]").click()
+        time.sleep(3)
+        assert self.driver.find_element_by_xpath("//h1").text == "Test Title"
+
     # def test_delete_post(self):
     #     conduit_registration(self.driver)
     #     self.driver.find_element_by_xpath("//a[@href='#/editor']").click()
