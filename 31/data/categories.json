@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //a[@class='tag-pill tag-default']) because of the following error:\nSyntaxError: Failed to execute 'evaluate' on 'Document': The string '//a[@class='tag-pill tag-default'])' is not a valid XPath expression.\n  (Session info: headless chrome=92.0.4515.131)",
+      "children" : [ {
+        "name" : "test_modify_post",
+        "uid" : "5d413d7a49f63c96",
+        "parentUid" : "887cb648acad7fe15844d0d24c69bdfa",
+        "status" : "broken",
+        "time" : {
+          "start" : 1628878834954,
+          "stop" : 1628878859836,
+          "duration" : 24882
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "887cb648acad7fe15844d0d24c69bdfa"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}
