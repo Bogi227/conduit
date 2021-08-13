@@ -119,9 +119,9 @@ class TestConduit(object):
     # Post módosítása
     def test_modify_post(self):
         conduit_login(self.driver)
-        time.sleep(5)
+        time.sleep(8)
         self.driver.find_element_by_xpath("//a[@href='#/editor']").click()
-        time.sleep(3)
+        time.sleep(4)
         self.driver.find_element_by_xpath('//input[@placeholder="Article Title"]').send_keys(
             "Test Mod Title")
         self.driver.find_element_by_xpath('//input[@placeholder="What\'s this article about?"]').send_keys(
@@ -130,12 +130,12 @@ class TestConduit(object):
             "test test modify")
         self.driver.find_element_by_xpath("//input[@placeholder='Enter tags']").send_keys("modify1")
         self.driver.find_element_by_xpath("//button[@type='submit']").click()
-        time.sleep(3)
+        time.sleep(4)
         self.driver.find_element_by_xpath("//a[@href='#/editor/fg']//span").click()
-        time.sleep(3)
+        time.sleep(4)
         self.driver.find_element_by_xpath("//input[@placeholder='Enter tags']").send_keys("modify2")
         self.driver.find_element_by_xpath("//button[@type='submit']").click()
-        time.sleep(3)
+        time.sleep(4)
         tags = self.driver.find_elements_by_xpath("//a[@class='tag-pill tag-default'])")
         for i in tags:
             if i.text == "modify2":
