@@ -1,0 +1,111 @@
+[ {
+  "uid" : "dbac5f601d439c63",
+  "name" : "test_upload_data",
+  "time" : {
+    "start" : 1628886967804,
+    "stop" : 1628886988768,
+    "duration" : 20964
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d2a3dee309fc3a47",
+  "name" : "test_delete_post",
+  "time" : {
+    "start" : 1628886917897,
+    "stop" : 1628886932755,
+    "duration" : 14858
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "60367ec7122d9fd1",
+  "name" : "test_modify_post",
+  "time" : {
+    "start" : 1628886937328,
+    "stop" : 1628886964217,
+    "duration" : 26889
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ab5ffcda85599a73",
+  "name" : "test_listing",
+  "time" : {
+    "start" : 1628886872957,
+    "stop" : 1628886878243,
+    "duration" : 5286
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8e713ed82c6b5575",
+  "name" : "test_cookies",
+  "time" : {
+    "start" : 1628886857465,
+    "stop" : 1628886860519,
+    "duration" : 3054
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d9c523b0e7289b34",
+  "name" : "test_new_post",
+  "time" : {
+    "start" : 1628886904699,
+    "stop" : 1628886914345,
+    "duration" : 9646
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "abf925bad19d3e13",
+  "name" : "test_login",
+  "time" : {
+    "start" : 1628886864084,
+    "stop" : 1628886868402,
+    "duration" : 4318
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "aec9ff118faf62de",
+  "name" : "test_pagination",
+  "time" : {
+    "start" : 1628886895742,
+    "stop" : 1628886900139,
+    "duration" : 4397
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b65ddb02759835fb",
+  "name" : "test_logout",
+  "time" : {
+    "start" : 1628886882775,
+    "stop" : 1628886891146,
+    "duration" : 8371
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9afe8db6b376c9e0",
+  "name" : "test_registration",
+  "time" : {
+    "start" : 1628886846558,
+    "stop" : 1628886853909,
+    "duration" : 7351
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6eb2386366c95861",
+  "name" : "test_saving_data",
+  "time" : {
+    "start" : 1628886993361,
+    "stop" : 1628887001746,
+    "duration" : 8385
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
