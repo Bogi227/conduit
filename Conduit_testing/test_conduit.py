@@ -94,10 +94,11 @@ class TestConduit(object):
         self.driver.find_element_by_xpath("//button[contains(text(),'Publish Article')]").click()
         time.sleep(3)
         assert self.driver.find_element_by_xpath("//h1").text == "Test Title"
+
     # Post törlése
     def test_delete_post(self):
         conduit_login(self.driver)
-        time.sleep(3)
+        time.sleep(5)
         self.driver.find_element_by_xpath("//a[@href='#/editor']").click()
         time.sleep(3)
         self.driver.find_element_by_xpath('//input[@placeholder="Article Title"]').send_keys(
