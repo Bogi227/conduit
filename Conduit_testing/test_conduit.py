@@ -59,7 +59,7 @@ class TestConduit(object):
     # Listázás
     def test_listing(self):
         conduit_registration(self.driver)
-        time.sleep(3)
+        time.sleep(5)
         article_titles = self.driver.find_elements_by_xpath('//a[@class="preview-link"]')
         assert article_titles != []
     #
