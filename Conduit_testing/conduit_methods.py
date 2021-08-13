@@ -5,7 +5,7 @@ def conduit_registration(driver):
     driver.find_element_by_xpath('//*[@id="app"]/nav/div/ul/li[3]/a').click()
     time.sleep(1)
     driver.find_element_by_xpath('//input[@placeholder="Username"]').send_keys("testname1")
-    driver.find_element_by_xpath('//input[@placeholder="Email"]').send_keys("testmail26@test.hu")
+    driver.find_element_by_xpath('//input[@placeholder="Email"]').send_keys("testmail27@test.hu")
     driver.find_element_by_xpath('//input[@placeholder="Password"]').send_keys("Testpass1")
     driver.find_element_by_xpath('//*[@id="app"]//form/button').click()
     time.sleep(3)
