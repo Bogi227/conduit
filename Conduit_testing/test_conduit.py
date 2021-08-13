@@ -71,7 +71,7 @@ class TestConduit(object):
         conduit_logout(self.driver)
         time.sleep(5)
         assert self.driver.find_element_by_xpath('//a[@href="#/login"]').text == "Sign in"
-    #
+
     # # Lapozás
     # def test_pagination(self):
     #     conduit_registration(self.driver)
