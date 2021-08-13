@@ -1,9 +1,0 @@
-[ {
-  "buildOrder" : 42,
-  "reportUrl" : "https://Bogi227.github.io/conduit/42/",
-  "reportName" : "Allure Report with history",
-  "data" : {
-    "run" : 11,
-    "retry" : 0
-  }
-} ]
