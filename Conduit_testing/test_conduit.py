@@ -78,6 +78,7 @@ class TestConduit(object):
         time.sleep(2)
         self.driver.find_element_by_xpath("//a[@class='page-link'][contains(text(),'1')]").click()
 
+    # Új post
     def test_new_post(self):
         conduit_login(self.driver)
         time.sleep(3)
@@ -93,23 +94,28 @@ class TestConduit(object):
         self.driver.find_element_by_xpath("//button[contains(text(),'Publish Article')]").click()
         time.sleep(3)
         assert self.driver.find_element_by_xpath("//h1").text == "Test Title"
-
-    # def test_delete_post(self):
-    #     conduit_registration(self.driver)
-    #     self.driver.find_element_by_xpath("//a[@href='#/editor']").click()
-    #     time.sleep(3)
-    #     self.driver.find_element_by_xpath('//input[@placeholder="Article Title"]').send_keys(
-    #         "Test Title Del")
-    #     self.driver.find_element_by_xpath('//input[@placeholder="What\'s this article about?"]').send_keys(
-    #         "test delete")
-    #     self.driver.find_element_by_xpath("//textarea[@placeholder='Write your article (in markdown)']").send_keys(
-    #         "test test delete")
-    #     self.driver.find_element_by_xpath("//input[@placeholder='Enter tags']").send_keys("TEST")
-    #     self.driver.find_element_by_xpath("//button[contains(text(),'Publish Article')]").click()
-    #     time.sleep(3)
-    #     self.driver.find_element_by_xpath("//button[@class='btn btn-outline-danger btn-sm']//span[1]").click()
-    #     delete_test = self.driver.find_elements_by_xpath('//h1[text()="Test Title Del"]')
-    #     assert len(delete_test) == 0
+    # Post törlése
+    def test_delete_post(self):
+        conduit_login(self.driver)
+        self.driver.find_element_by_xpath("//a[@href='#/editor']").click()
+        time.sleep(3)
+        self.driver.find_element_by_xpath('//input[@placeholder="Article Title"]').send_keys(
+            "Test Title Del")
+        self.driver.find_element_by_xpath('//input[@placeholder="What\'s this article about?"]').send_keys(
+            "test delete")
+        self.driver.find_element_by_xpath("//textarea[@placeholder='Write your article (in markdown)']").send_keys(
+            "test test delete")
+        self.driver.find_element_by_xpath("//input[@placeholder='Enter tags']").send_keys("TEST")
+        self.driver.find_element_by_xpath("//button[contains(text(),'Publish Article')]").click()
+        time.sleep(3)
+        self.driver.find_element_by_xpath("//button[@class='btn btn-outline-danger btn-sm']//span[1]").click()
+        time.sleep(3)
+        delete_test = self.driver.find_elements_by_xpath('//h1').text
+        for i in delete_test:
+            if i != "Test Title Del":
+                print("test passed")
+            else:
+                print("test failed")
 
     # def test_save_data(self):
     #     conduit_registration(self.driver)
