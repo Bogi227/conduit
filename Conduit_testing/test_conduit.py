@@ -80,6 +80,7 @@ class TestConduit(object):
 
     def test_new_post(self):
         conduit_login(self.driver)
+        time.sleep(3)
         self.driver.find_element_by_xpath("//a[@href='#/editor']").click()
         time.sleep(3)
         self.driver.find_element_by_xpath('//input[@placeholder="Article Title"]').send_keys(
