@@ -45,8 +45,6 @@ class TestConduit(object):
 
     # Bejelentkezés
     def test_login(self):
-        # conduit_login(self.driver)
-        # conduit_logout(self.driver)
         time.sleep(1)
         self.driver.find_element_by_xpath('//a[@href="#/login"]').click()
         self.driver.find_element_by_xpath('//input[@placeholder="Email"]').send_keys("testmail61@test.hu")
@@ -71,15 +69,15 @@ class TestConduit(object):
         self.driver.find_element_by_xpath('//*[@id="app"]/nav/div/ul/li[5]/a').click()
         time.sleep(5)
         assert self.driver.find_element_by_xpath('//a[@href="#/login"]').text == "Sign in"
-    #
-    # # Lapozás
-    # def test_pagination(self):
-    #     conduit_registration(self.driver)
-    #     time.sleep(2)
-    #     self.driver.find_element_by_xpath("//a[@class='page-link'][contains(text(),'2')]").click()
-    #     time.sleep(2)
-    #     self.driver.find_element_by_xpath("//a[@class='page-link'][contains(text(),'1')]").click()
-    #
+
+    # Lapozás
+    def test_pagination(self):
+        conduit_login(self.driver)
+        time.sleep(2)
+        self.driver.find_element_by_xpath("//a[@class='page-link'][contains(text(),'2')]").click()
+        time.sleep(2)
+        self.driver.find_element_by_xpath("//a[@class='page-link'][contains(text(),'1')]").click()
+
     # def test_new_post(self):
     #     conduit_registration(self.driver)
     #     self.driver.find_element_by_xpath("//a[@href='#/editor']").click()
